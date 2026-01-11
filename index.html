@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part Tracking System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Part Tracking System</h1>
+            <p>Advanced computer vision analysis and object tracking</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <span class="step-label">STEP 1</span>
+                    Reference Image Configuration
+                </div>
+                <div class="card-body">
+                    <div class="button-group">
+                        <input type="file" id="refImage" accept="image/*">
+                        <label for="refImage" class="file-upload">Select Reference Image</label>
+                        <button class="btn btn-outline" id="undoBtn" disabled>Clear Selection</button>
+                    </div>
+
+                    <div id="refStatus"></div>
+
+                    <div class="canvas-container">
+                        <canvas id="refCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="step-label">STEP 2</span>
+                    Target Image Processing
+                </div>
+                <div class="card-body">
+                    <div class="button-group">
+                        <input type="file" id="targetImage" accept="image/*" disabled>
+                        <label for="targetImage" class="file-upload disabled" id="targetLabel">
+                            Select Target Image
+                        </label>
+                    </div>
+
+                    <div id="targetStatus"></div>
+
+                    <div class="canvas-container">
+                        <canvas id="targetCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card results-section">
+            <div class="card-header">Analysis Results</div>
+            <div class="card-body">
+                <div id="results">
+                    <div class="empty-message">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        <p>No tracking data available. Upload images to begin analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

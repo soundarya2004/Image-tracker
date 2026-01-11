@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #0f1115, #151922);
+    min-height: 100vh;
+    padding: 30px;
+    color: #e5e7eb;
+}
+
+/* Header */
+.header {
+    background: #1c1f26;
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    margin-bottom: 30px;
+    border-left: 5px solid #6c8cbf;
+}
+
+.header h1 {
+    color: #f9fafb;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #9ca3af;
+    font-size: 0.95em;
+}
+
+/* Layout */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+/* Cards */
+.card {
+    background: #1c1f26;
+    border: 1px solid #2a2f3a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #2563eb 0%, #7499e7 100%);
+    color: #f9fafb;
+    padding: 18px 25px;
+    font-weight: 600;
+    font-size: 1.05em;
+    border-bottom: 3px solid #526085;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Step label */
+.step-label {
+    display: inline-block;
+    background: #111827;
+    color: #93c5fd;
+    padding: 4px 12px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-right: 10px;
+    letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 11px 24px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+}
+
+.btn-primary {
+    background: #7499e7;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #7499e7;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #e5e7eb;
+    border: 2px solid #374151;
+}
+
+.btn-outline:hover {
+    background: #111827;
+    border-color: #60a5fa;
+}
+
+.btn:disabled {
+    background: #2a2f3a;
+    color: #6b7280;
+    cursor: not-allowed;
+    border-color: #2a2f3a;
+}
+
+/* File input */
+input[type="file"] {
+    display: none;
+}
+
+.file-upload {
+    display: inline-block;
+    padding: 11px 24px;
+    background: #7499e7;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+}
+
+.file-upload:hover {
+    background: #7499e7;
+}
+
+.file-upload.disabled {
+    background: #2a2f3a;
+    color: #6b7280;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Canvas */
+.canvas-container {
+    border: 2px solid #2a2f3a;
+    background: #0f1115;
+    padding: 15px;
+    margin-top: 20px;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+canvas {
+    max-width: 100%;
+    cursor: crosshair;
+    background: #000;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.8);
+}
+
+/* Notifications */
+.notification {
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-left: 4px solid;
+}
+
+.notification-info {
+    background: #0b1220;
+    color: #93c5fd;
+    border-color: #3b82f6;
+}
+
+.notification-success {
+    background: #052e1a;
+    color: #86efac;
+    border-color: #22c55e;
+}
+
+.notification-error {
+    background: #2a0b0b;
+    color: #fca5a5;
+    border-color: #ef4444;
+}
+
+/* Results */
+.results-section {
+    grid-column: 1 / -1;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.metric-box {
+    background: #111827;
+    border: 1px solid #2a2f3a;
+    padding: 25px;
+    text-align: center;
+}
+
+.metric-title {
+    font-size: 11px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.metric-number {
+    font-size: 32px;
+    color: #f9fafb;
+    font-weight: 700;
+}
+
+/* Empty state */
+.empty-message {
+    text-align: center;
+    padding: 80px 20px;
+    color: #6b7280;
+}
+
+.empty-message svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    opacity: 0.35;
+}
